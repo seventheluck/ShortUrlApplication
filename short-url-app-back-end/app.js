@@ -6,7 +6,7 @@ const PORT = 3001;
 app.use(express.static('./public'));
 
 app.get('/short', (req, res) => {
-    const baseUrl = 'localhost:3001/';
+    const baseUrl = 'http://shorturl-env.kwncuxdbyk.us-west-2.elasticbeanstalk.com:3001/';
     let longUrl = req.query.longUrl;
     if (longUrl !== null || longUrl !== undefined || longUrl.length !== 0) {
         const lowerCaseUrl = longUrl.toLowerCase();
